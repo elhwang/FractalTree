@@ -5,10 +5,17 @@ public void setup()
 {   
   size(640,480); 
   frameRate(4);
+  
 } 
 public void draw() 
 {   
   background(#B8E3FA);
+    for(int i = 0; i <= 700; i+=77){
+    stroke(-0.5);
+    fill(255);
+    rect(i,370,25,340);
+  }
+  rect(0,390,700,25);
   fill(#FCF18C);
   stroke(#FFF6A2);
   ellipse(640,0,200,200);
@@ -16,11 +23,6 @@ public void draw()
   stroke(#6F3939);
   line(320,480,320,380);   
   drawBranches(320,380,100,3*Math.PI/2,50);
-  for(int i = 0; i <= 700; i+=77){
-    fill(255);
-    rect(i,370,25,340);
-  }
-  rect(0,390,700,25);
 } 
 public void drawBranches(int x,int y, double branchLength, double angle, double thicc) 
 {   
@@ -38,7 +40,7 @@ public void drawBranches(int x,int y, double branchLength, double angle, double 
  line(x,y,endX2,endY2);
  }
  else{
- if(branchLength > 25){
+ if(branchLength > 20){
  stroke(#6F3939);
  }
  else{
